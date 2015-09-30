@@ -1,0 +1,29 @@
+@import "bootstrap";
+
+header {
+  background-color: #ddd;
+  .logo {
+    text-indent: -20000px;
+    padding-left: 1em;
+    a {
+      background-image: url("../images/phpem_logo.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      display: block;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width:650px)
+{
+.logo {
+  display: table-cell;
+  float: none;
+  height: 55px;
+  vertical-align: middle;
+  width: 140px;
+ }
+
+}
