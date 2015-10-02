@@ -20,4 +20,6 @@ Route::get('/', function () {
 
 Route::resource('speaker', 'SpeakerController');
 
+Route::resource('talk', 'TalkController');
+
 
