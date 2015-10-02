@@ -16,6 +16,8 @@ Route::get('/', function () {
     return view('welcome');
 
 });
-Route::get('speaker', [
-    'as' => 'speaker', 'uses' => 'SpeakerController@create'
-]);
+
+
+Route::resource('speaker', 'SpeakerController');
+
+

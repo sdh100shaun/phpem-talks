@@ -4,16 +4,16 @@
     <div class="col-lg-6 col-md-8 col-sm-12 center-block">
         <h1> Speaker Details </h1>
         {!! BootForm::vertical() !!}
-        {!! BootForm::text('Firstname')  !!}
-        {!! BootForm::text('Lastname')  !!}
-        {!! BootForm::text('@Twitter')  !!}
-        {!! BootForm::text('Telno')  !!}
-        {!! BootForm::email('Email')  !!}
-        {!! BootForm::textarea('Excerpt')  !!}
-        {!! BootForm::textarea('Notes')  !!}
+        {!! BootForm::text('firstname')  !!}
+        {!! BootForm::text('lastname')  !!}
+        {!! BootForm::text('@twitter')  !!}
+        {!! BootForm::text('telno')  !!}
+        {!! BootForm::email('email')  !!}
+        {!! BootForm::textarea('excerpt')  !!}
+        {!! BootForm::textarea('notes')  !!}
 
-        {!!  BootForm::radios('organiser', 'Details taken by', $organisers, null)!!}
-        {!! BootForm::submit('Add') !!}
+        {!! BootForm::radios('organiser', 'Details taken by', $organisers, null)!!}
+        {!! BootForm::submit('add') !!}
         {!! BootForm::close() !!}
     </div>
 @endsection

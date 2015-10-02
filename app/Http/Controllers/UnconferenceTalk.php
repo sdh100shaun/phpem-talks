@@ -2,23 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Speaker;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
-
-
-class SpeakerController extends Controller
+class UnconferenceTalk extends Controller
 {
-    private $speaker;
-
-    protected $guarded=["id"];
-
-    public function __construct(Speaker $speaker)
+    
+    public function __
     {
-
-        $this->speaker = $speaker;
-
+        
     }
     /**
      * Display a listing of the resource.
@@ -27,9 +20,7 @@ class SpeakerController extends Controller
      */
     public function index()
     {
-
-        return view('speaker.details')->with("organisers",$this->speaker->getOrganisers());
-
+        //
     }
 
     /**
@@ -39,9 +30,7 @@ class SpeakerController extends Controller
      */
     public function create()
     {
-
-         return view('speaker.details')->with("organisers",$this->speaker->getOrganisers());
-
+        //
     }
 
     /**
@@ -52,15 +41,7 @@ class SpeakerController extends Controller
      */
     public function store(Request $request)
     {
-        $params = $request->all();
-
-        $params["organiser"] = $this->speaker->getOrganiserName($params["organiser"]);
-
-        var_dump($params);
-
-        $this->speaker->create();
-
-
+        //
     }
 
     /**
@@ -71,7 +52,8 @@ class SpeakerController extends Controller
      */
     public function show($id)
     {
-        //
+        $talk = 
+        return view ('talks')->with;
     }
 
     /**
