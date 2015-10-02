@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Talk;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -15,7 +16,14 @@ class TalkController extends Controller
      */
     public function index()
     {
-        //
+
+        $talks = Talk::orderBy('starttime', 'asc')->take(1)->get();
+
+        $talk = $talks->pop();
+
+        return view('talk.details')->with([
+            'talk'  =>  $talk
+        ]);
     }
 
     /**
