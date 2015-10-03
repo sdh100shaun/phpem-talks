@@ -10,9 +10,9 @@
             <h4>The next Unconference talk is...</h4>
             <h1>{{ $talk->speaker }}</h1>
             <h2>{{ $talk->title }}</h2>
-            <h3>From {{ $talk->starttime->format('H:i') }} until {{ $talk->endtime->format('H:i') }}</h3>
+
             <h4>{{ $talk->abstract }}</h4>
-            <img src="images/phpnw-logo.png" alt="" style="width: 40px; margin-top: 20px;"/>
+            <img src="../../images/phpnw15green.png" alt="" style="width: 100px; margin-top: 20px;"/>
         </div>
     @endif
 @endsection

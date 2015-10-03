@@ -18,7 +18,7 @@ class CreateTalksTable extends Migration
             $table->string ('title');
             $table->dateTime('starttime');
             $table->dateTime('endtime');
-            $table->text('abstract');
+            $table->text('abstract')->nullable();
             $table->timestamps();
         });
     }

@@ -21,6 +21,8 @@ class TalkController extends Controller
 
         $talk = $talks->pop();
 
+
+
         return view('talk.details')->with([
             'talk'  =>  $talk
         ]);
@@ -55,7 +57,10 @@ class TalkController extends Controller
      */
     public function show($id)
     {
-        //
+       $talk = Talk::findOrFail($id);
+        return view('talk.details')->with([
+            'talk'  =>  $talk
+        ]);
     }
 
     /**
